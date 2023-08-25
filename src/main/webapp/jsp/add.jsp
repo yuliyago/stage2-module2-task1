@@ -25,7 +25,7 @@
         <button class="w3-button w3-round btn-block w3-green" type="submit">Submit</button>
     </form>
     <div>
-        <button class="w3-btn w3-light-blue w3-round-large" onclick="location.href='/users'">Users</button>
+        <button class="w3-btn w3-light-blue w3-round-large" onclick="location.href='users'">Users</button>
     </div>
 </div>
 </body>
