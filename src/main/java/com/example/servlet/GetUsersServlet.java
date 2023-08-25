@@ -3,6 +3,7 @@ package com.example.servlet;
 import com.example.User;
 import com.example.Warehouse;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,8 +13,10 @@ import java.io.IOException;
 @WebServlet("/users")
 public class GetUsersServlet extends HttpServlet{
     @Override
-    public void init() {
-
+    public void init (ServletConfig config) throws ServletException
+    {
+        System.out.println ("name = " + config.getInitParameter("name") +
+                "surname = " + config.getInitParameter("surname"));
     }
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             Warehouse obj = Warehouse.getInstance();
