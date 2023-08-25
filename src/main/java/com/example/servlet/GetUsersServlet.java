@@ -16,8 +16,6 @@ public class GetUsersServlet extends HttpServlet{
     public void init (ServletConfig config) throws ServletException
     {
         super.init(config);
-        System.out.println ("name = " + config.getInitParameter("name") +
-                "surname = " + config.getInitParameter("surname"));
     }
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             Warehouse obj = Warehouse.getInstance();
