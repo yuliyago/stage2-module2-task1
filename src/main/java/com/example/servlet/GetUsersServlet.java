@@ -11,15 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 @WebServlet("/users")
 public class GetUsersServlet extends HttpServlet{
+    @Override
+    public void init() {
+
+    }
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             Warehouse obj = Warehouse.getInstance();
             request.setAttribute("users",obj.getUsers());
             getServletContext().getRequestDispatcher("/jsp/users.jsp").forward(request,response);
         }
-//    protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
-//            Warehouse obj = Warehouse.getInstance();
-//            request.setAttribute("users",obj.getUsers());
-//        System.out.println(obj.getUsers().size());
-//        getServletContext().getRequestDispatcher("/jsp/users.jsp").forward(request, response);
-//    }
 }
